@@ -1,0 +1,15 @@
+<!-- image-popup.component.html -->
+<div class="image-container">
+  <div class="popup-content">
+    <!--  <h2>{{ data.name }}</h2>-->
+    <div class="zoom-buttons">
+      <button mat-icon-button (click)="zoomToFit()">Zoom to Fit</button>
+      <button mat-icon-button (click)="zoomIn()">Zoom In</button>
+      <button mat-icon-button (click)="zoomOut()">Zoom Out</button>
+    </div>
+<!--    <img [src]="data.path" [alt]="data.name" [style]="getInitialStyles()">-->
+    <lib-ngx-image-zoom
+      [fullImage]="data.path"
+    ></lib-ngx-image-zoom>
+  </div>
+</div>

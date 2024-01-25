@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Images list</h2>
+  <mat-list>
+    <mat-list-item *ngFor="let image of images; let idx = index">
+      <div class="image-info">
+        <div>Image: {{image.name}}</div>
+        <div>Position: {{image.position}}</div>
+      </div>
+      <button mat-button color="primary" (click)="viewImage(image)">
+        <mat-icon>remove_red_eye</mat-icon>
+      </button>
+      <mat-divider *ngIf="idx !== images.length-1"></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>
