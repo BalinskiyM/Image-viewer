@@ -51,6 +51,10 @@ export class ImagePopupComponent implements OnInit {
   }
 
   zoomOut(): void {
+    if (this.zoomedToFit && this.zoomLevel === 1) {
+      return;
+    }
+
     if (this.zoomLevel > this.minZoomLevel) {
       this.zoomLevel -= 0.25;
       this.setTransform();
