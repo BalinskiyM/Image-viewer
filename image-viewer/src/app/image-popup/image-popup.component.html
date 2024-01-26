@@ -10,6 +10,11 @@
   <div mat-dialog-actions>
     <button mat-button (click)="zoomToFit()">Zoom to Fit</button>
     <mat-icon (click)="zoomIn()">zoom_in</mat-icon>
-    <mat-icon (click)="zoomOut()">zoom_out</mat-icon>
+    <mat-icon
+      [ngStyle]="{ opacity: this.zoomedToFit && '0.5', cursor: 'initial' }"
+      (click)="zoomOut()"
+    >
+      zoom_out
+    </mat-icon>
   </div>
 </div>

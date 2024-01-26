@@ -29,4 +29,13 @@
       display: block;
     }
   }
+
+  .mat-dialog-actions {
+    justify-content: end;
+    gap: 3px;
+
+    .mat-icon {
+      cursor: pointer;
+    }
+  }
 }
