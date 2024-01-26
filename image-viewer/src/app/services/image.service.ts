@@ -10,14 +10,14 @@ export class ImageService {
 
   private images: ImageEntity[] = [
     { id: '1', name: 'First', path: '../../assets/images/image1.jpg', position: 'Left' },
-    { id: '2', name: 'Second', path: '../../assets/images/image2.jpg', position: 'Left' },
+    { id: '2', name: 'Second', path: '../../assets/images/image2.jpg', position: 'Top' },
     { id: '3', name: 'Third', path: '../../assets/images/image3.jpg', position: 'Right' },
     { id: '4', name: 'Fourth', path: '../../assets/images/image4.jpg', position: 'Top' },
   ];
 
   private imagePositions: ImagePositionEntity[] = [
     { id: '1', name: 'Left', x: 100, y: 150 },
-    { id: '2', name: 'Right', x: 200, y: 300 },
+    { id: '2', name: 'Right', x: 200, y: 400 },
     { id: '3', name: 'Top', x: 300, y: 450 },
   ];
 

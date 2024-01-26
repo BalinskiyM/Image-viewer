@@ -51,7 +51,9 @@ export class ImageListComponent implements OnInit {
             name: image.name,
             path: image.path,
             position
-          }
+          },
+          width: '600px',
+          maxHeight: '500px'
         })
       }
     });

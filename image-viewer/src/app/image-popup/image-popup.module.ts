@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ImagePopupComponent } from './image-popup.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     BrowserAnimationsModule,
     MatDialogModule,
     MatButtonModule,
-    NgxImageZoomModule
+    MatIconModule,
   ],
   exports: [
     ImagePopupComponent

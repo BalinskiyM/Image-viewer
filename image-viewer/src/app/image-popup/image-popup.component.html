@@ -1,15 +1,15 @@
-<!-- image-popup.component.html -->
-<div class="image-container">
-  <div class="popup-content">
-    <!--  <h2>{{ data.name }}</h2>-->
-    <div class="zoom-buttons">
-      <button mat-icon-button (click)="zoomToFit()">Zoom to Fit</button>
-      <button mat-icon-button (click)="zoomIn()">Zoom In</button>
-      <button mat-icon-button (click)="zoomOut()">Zoom Out</button>
-    </div>
-<!--    <img [src]="data.path" [alt]="data.name" [style]="getInitialStyles()">-->
-    <lib-ngx-image-zoom
-      [fullImage]="data.path"
-    ></lib-ngx-image-zoom>
+<div class="popup-container">
+  <div class="popup-title">
+    <div mat-dialog-title>{{ data.name }}</div>
+    <mat-icon [matDialogClose]="true">cancel</mat-icon>
+  </div>
+  <div mat-dialog-content>
+    <img #imgElementTmpl [src]="data.path" [alt]="data.name"
+         [ngStyle]="{ transform, width: this.zoomedToFit && '100%', height: this.zoomedToFit && '100%' }">
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="zoomToFit()">Zoom to Fit</button>
+    <mat-icon (click)="zoomIn()">zoom_in</mat-icon>
+    <mat-icon (click)="zoomOut()">zoom_out</mat-icon>
   </div>
 </div>
